@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Mind Reader</title>
+</head>
+<body>
+    <div class="container" id="start-container">
+        <h1>I will read your mind</h1>
+        <span>Shall we start?</span>
+        <div class="btn-group">
+            <button onclick="startGame()">Yes</button>
+            <button onclick="exitGame()">No</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="input-container">
+        <span>Enter any number you think of:</span><br><br>
+        <input type="text" id="user-input" placeholder="Your number">
+        <div class="btn-group">
+            <button onclick="processInput()">Okay</button>
+            <button onclick="cancelGame()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="loading-container">
+        <h2 id="loading-text">Hold on a second...</h2>
+        <div class="loading-bar"></div>
+    </div>
+
+    <div class="container hidden" id="result-container">
+        <h2>🧠🔮</h2>
+        <p id="decoded-answer"></p>
+        <button onclick="resetGame()">Try Again</button>
+    </div>
+</body>
+</html>

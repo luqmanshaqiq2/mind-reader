@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://t4.ftcdn.net/jpg/06/20/49/19/360_F_620491978_NisXY7WS8M1dd8K4WHVxs7xcdGQsdHHe.jpg);
+    background-size: cover;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.555);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+span, p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 8px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+button {
+    padding: 8px 20px;
+    font-size: 1rem;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: paleturquoise;
+}
+
+.hidden {
+    display: none;
+}
+
+.loading-bar {
+    width: 80%;
+    height: 8px;
+    background: #ddd;
+    position: relative;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.loading-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #4caf50;
+    animation: load 3s linear forwards;
+}
+
+@keyframes load {
+    100% {
+        width: 100%;
+    }
+}
+
